@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `The Theatrical Designs of Erich R. Keil`,
+    description: `Selected works of Lighting and Sound Design for Theatre, Dance, and Opera.`,
+    author: `zenlex`,
+    siteUrl: `https://zenlex.dev/theatre`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `gallery`,
+        path: `${__dirname}/content/gallery`,
       },
     },
     `gatsby-transformer-sharp`,

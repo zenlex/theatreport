@@ -1,0 +1,10 @@
+-Select photos and get them organized in subfolders
+-Create Thumbs folder 
+-Build gallery from thumbs on index.js
+-build show page template with prop in query string for show title
+-link gallery thumbs to show page with props for query 
+-polish up styling
+-deploy to gh-pages
+-link from main portfolio site
+-move on to jekyll blog
+
