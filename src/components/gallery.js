@@ -16,6 +16,7 @@ const useGallery = () => {
               ...GatsbyImageSharpFluid
             }
           }
+          name
         }
       }
     }
@@ -25,20 +26,18 @@ const useGallery = () => {
   return data.allFile.nodes.map(node => ({
     ...node.childImageSharp,
     id: node.id,
+    name: node.name
   }));
 };
 
 const Gallery = () => {
-  const imgStyle = {
-    backgroundColor: 'black'
-  }
   const images = useGallery()
   return (
-    <div className="gallery" style={imgStyle}>
-      {images.map(({ id, fluid }) => (
-        <Link to='/id'>
-        <Img key={id} fluid={fluid}  />
-        </Link>
+    <div className="gallery">
+      {images.map(({ id, fluid, name }) => (
+          <Link to={`/${name}`}>
+          <Img key={id} fluid={fluid}  />
+          </Link>
       ))}
     </div>
   )

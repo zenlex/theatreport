@@ -1,3 +1,0 @@
-Figure out where background of app is getting its styles - there's a bg-color variable set in a commons.js but that's from some module. May need to be paassed in as a component prop. Probably should be. 
-
-Once bg is black, try wrapping links in lightboxes that are filled with a graphql static query to get that show images
