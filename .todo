@@ -1,10 +1,3 @@
--Select photos and get them organized in subfolders
--Create Thumbs folder 
--Build gallery from thumbs on index.js
--build show page template with prop in query string for show title
--link gallery thumbs to show page with props for query 
--polish up styling
--deploy to gh-pages
--link from main portfolio site
--move on to jekyll blog
+Figure out where background of app is getting its styles - there's a bg-color variable set in a commons.js but that's from some module. May need to be paassed in as a component prop. Probably should be. 
 
+Once bg is black, try wrapping links in lightboxes that are filled with a graphql static query to get that show images

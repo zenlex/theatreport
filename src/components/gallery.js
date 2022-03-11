@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
 import React from 'react'
 import './gallery.css'
@@ -29,11 +29,16 @@ const useGallery = () => {
 };
 
 const Gallery = () => {
+  const imgStyle = {
+    backgroundColor: 'black'
+  }
   const images = useGallery()
   return (
-    <div className="gallery">
+    <div className="gallery" style={imgStyle}>
       {images.map(({ id, fluid }) => (
-        <Img key={id} fluid={fluid} />
+        <Link to='/id'>
+        <Img key={id} fluid={fluid}  />
+        </Link>
       ))}
     </div>
   )

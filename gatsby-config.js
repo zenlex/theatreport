@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `The Theatrical Designs of Erich R. Keil`,
+    title: `Selected Lighting Designs - Erich R. Keil`,
     description: `Selected works of Lighting and Sound Design for Theatre, Dance, and Opera.`,
     author: `zenlex`,
     siteUrl: `https://zenlex.dev/theatre`,
@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `gallery`,
-        path: `${__dirname}/content/gallery`,
+        path: `${__dirname}/content/gallery/thumbs`,
       },
     },
     `gatsby-transformer-sharp`,
