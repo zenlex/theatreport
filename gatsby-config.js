@@ -5,7 +5,7 @@ module.exports = {
     author: `zenlex`,
     siteUrl: `https://zenlex.dev/theatre`,
   },
-  pathPrefix: "/reponame",
+  pathPrefix: "/theatreport",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
