@@ -1,14 +1,12 @@
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from 'gatsby-image'
-import React from 'react'
-import './gallery.css'
+import Img from "gatsby-image"
+import React from "react"
+import "./gallery.css"
 
 const useGallery = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(
-        filter: { sourceInstanceName: { eq: "gallery" } }
-      ) {
+      allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
         nodes {
           id
           childImageSharp {
@@ -20,27 +18,31 @@ const useGallery = () => {
         }
       }
     }
-  `);
-
+  `)
 
   return data.allFile.nodes.map(node => ({
     ...node.childImageSharp,
     id: node.id,
-    name: node.name
-  }));
-};
+    name: node.name,
+  }))
+}
 
 const Gallery = () => {
   const images = useGallery()
   return (
     <div className="gallery">
       {images.map(({ id, fluid, name }) => (
+        <div
+          className="titleoverlay"
+        >
           <Link to={`/${name}`}>
-          <Img key={id} fluid={fluid}  />
+          <h6 className="gallery-show-title">{name}</h6>
+            <Img key={id} fluid={fluid} style={{ zIndex: -1 }} />
           </Link>
+        </div>
       ))}
     </div>
   )
 }
 
-export default Gallery;
+export default Gallery
