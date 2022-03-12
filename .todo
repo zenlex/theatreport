@@ -1,0 +1,10 @@
+Look at Bootstrap and MaterialUI components for handling the gallery and lightbox modes rather than the CSS mess it is now
+
+Implement the lightbox component with captions or a page title
+
+Clean up the thumbnail gallery layout
+
+add titles to the thumbnail hovers
+
+have show titles for the programmatically generated pages handled by a graphql query if possible
+
