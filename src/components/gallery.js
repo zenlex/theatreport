@@ -32,12 +32,12 @@ const Gallery = () => {
   return (
     <div className="gallery">
       {images.map(({ id, fluid, name }) => (
-        <div
+        <div key={id}
           className="titleoverlay"
         >
           <Link to={`/${name}`}>
           <h6 className="gallery-show-title">{name}</h6>
-            <Img key={id} fluid={fluid} style={{ zIndex: -1 }} />
+            <Img fluid={fluid} style={{ zIndex: -1 }} />
           </Link>
         </div>
       ))}
